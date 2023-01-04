@@ -109,7 +109,7 @@ button {
   border-radius: 10px;
 }
 
-#drink-section img{
+#drink-section img, .filter-section img{
     width: 100%;
     height: auto;
 }
@@ -117,4 +117,14 @@ button {
 div.card{
     border: 2px solid grey;
     padding: 16px;
+}
+#filter-gallery{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-gap: 2em;
+}
+
+figure{
+	margin: 0;
+	padding: 0;
 }

@@ -45,5 +45,8 @@ window.addEventListener("load", function(){
       card.innerHTML ='Instructions  <br><br>'+  coktail.drinks[0].strInstructions
       drinkSection.appendChild(card)
     }
+
+
+
 });
 
