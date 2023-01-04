@@ -26,7 +26,7 @@ window.addEventListener("load", function(){
       console.log(coktail.drinks[0])
       let drinkSection = document.getElementById('drink-section')
       let drinkName = document.createElement('h2')
-      drinkSection.innerHTML= "I"
+      drinkSection.innerHTML= ""
       drinkName.innerHTML= coktail.drinks[0].strDrink
       drinkSection.appendChild(drinkName)
       let img = document.createElement('img')
