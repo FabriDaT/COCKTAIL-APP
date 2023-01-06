@@ -17,19 +17,16 @@ window.onclick = function(event) {
     }
   }
 }
-document.querySelector('a').addEventListener("click", (e)=>{
-  console.log((e).getAttribute('value'))
-}
-)
-console.log(document.querySelector('a').value)
- 
-
-
-
-
+let form = document.forms[0]
+form.addEventListener('submit', function (event) {
+  event.preventDefault();
+   let tequila = document.querySelector('#inputTequila')
+   alert(tequila.value)
+  filterCocktails('tequila');
+})
 
     //FILTER BY ALCOHOL
-    filterCocktails(document.querySelector('#dropdown').value);
+    
     function filterCocktails(alcohol){
         fetch(`https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${alcohol}`)
         .then((response) => {
