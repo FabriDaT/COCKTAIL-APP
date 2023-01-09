@@ -1,17 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Archivo:wght@300;400&family=Montserrat:wght@400;700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Rubik+Vinyl&display=swap');
 :root {
   --negro: #000000ff;
   --oscuro: #1c1c1f;
 
   --app-grey: #F2F2F2;
-  --azul: #3333ffff;
-  --azul-hover: rgb(40, 40, 197);
-  --verde: #00cc7eff;
-  --rosa: #ff76e2ff;
-  --lila: #8a6df1ff;
-  --laranja: #ff7059ff;
-  --amarelo: #ffc51aff;
 
 }
 
@@ -23,22 +16,33 @@
   box-sizing: border-box;
 }
 
-h1,
-h2,
-h3 {
-  font-family: 'Montserrat', sans-serif;
+h1
+{
+  font-family: 'Lobster', cursive;
+  font-family: 'Rubik Vinyl', cursive;
+  
+  text-align: center;
+  font-size: 3rem;
+
 }
 
 body {
   min-height: 100vh;
   color: whitesmoke;
   background-color: var(--negro);
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+   
 }
 
 button {
   border: none;
   border-radius: 3px;
   cursor: pointer;
+
 }
 
 /* CSS */
@@ -129,47 +133,43 @@ figure{
 	padding: 0;
 }
 
-/* Dropdown Button */
-.dropbtn {
-  background-color: #3498DB;
-  color: white;
-  padding: 16px;
-  font-size: 16px;
-  border: none;
-  cursor: pointer;
+.buttons{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
 }
-
-/* Dropdown button on hover & focus */
-.dropbtn:hover, .dropbtn:focus {
-  background-color: #2980B9;
-}
-
-/* The container <div> - needed to position the dropdown content */
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-/* Dropdown Content (Hidden by Default) */
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f1f1f1;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+.btn{
   z-index: 1;
-}
-
-/* Links inside the dropdown */
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
+  position: relative;
   display: block;
+  color: rgb(0, 0, 0);
+  font-size: 14px;
+  font-family: "montserrat";
+  text-decoration: none;
+  margin: 7px;
+  border: 3px solid #8f4848;
+  padding: 14px 60px;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: 1s all ease;
+}
+.btn::before{
+  background: #ff7675;
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  z-index: -1;
+  transition: all 0.6s ease;
+}
+.btn::before{
+  width: 0%;
+  height: 100%;
 }
 
-/* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: #ddd;}
-
-/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
-.show {display:block;}
+.btn:hover::before{
+  width: 100%;
+}

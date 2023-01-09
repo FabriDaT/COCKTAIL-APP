@@ -1,29 +1,33 @@
-/* When the user clicks on the button,
-toggle between hiding and showing the dropdown content */
-function myFunction() {
-  document.getElementById("myDropdown").classList.toggle("show");
-}
 
-// Close the dropdown menu if the user clicks outside of it
-window.onclick = function(event) {
-  if (!event.target.matches('.dropbtn')) {
-    var dropdowns = document.getElementsByClassName("dropdown-content");
-    var i;
-    for (i = 0; i < dropdowns.length; i++) {
-      var openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains('show')) {
-        openDropdown.classList.remove('show');
-      }
-    }
-  }
-}
-let form = document.forms[0]
-form.addEventListener('submit', function (event) {
-  event.preventDefault();
-   let tequila = document.querySelector('#inputTequila')
-   alert(tequila.value)
-  filterCocktails('tequila');
+let btn1 = document.querySelector('.bt1');
+btn1.addEventListener("click",()=>{
+  filterCocktails(btn1.value)
+  
 })
+let btn2 = document.querySelector('.bt2');
+btn2.addEventListener("click",()=>{
+  filterCocktails(btn2.value)
+  
+})
+let btn3 = document.querySelector('.bt3');
+btn3.addEventListener("click",()=>{
+  filterCocktails(btn3.value)
+  
+})
+let btn4 = document.querySelector('.bt4');
+btn4.addEventListener("click",()=>{
+  filterCocktails(btn4.value)
+})
+let btn5 = document.querySelector('.bt5');
+btn5.addEventListener("click",()=>{
+  filterCocktails(btn5.value)
+})
+let btn6 = document.querySelector('.bt6');
+btn6.addEventListener("click",()=>{
+  filterCocktails(btn6.value)
+})
+
+
 
     //FILTER BY ALCOHOL
     
