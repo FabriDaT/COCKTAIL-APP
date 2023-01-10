@@ -173,3 +173,10 @@ figure{
 .btn:hover::before{
   width: 100%;
 }
+
+
+@media screen and (max-width: 480px) {
+ img{
+    width: 100%;
+  }
+}
