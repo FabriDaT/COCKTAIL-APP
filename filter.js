@@ -135,13 +135,14 @@ btn6.addEventListener("click",()=>{
             measure = cocktail.drinks[0][`strMeasure${i}`] + ': ';
           }
       
-          let ingredient = document.createElement('ons-list-item');
+          let ingredient = document.createElement('li');
           ingredient.innerText = measure + cocktail.drinks[0][`strIngredient${i}`];
           filterSection.appendChild(ingredient);
         }
       
-        let instructions = document.createElement('ons-card');
-        instructions.innerText = cocktail.drinks[0].strInstructions;
+        let instructions = document.createElement('div');
+        instructions.classList.add('card')
+        instructions.innerHTML = 'Let´s do it!  <br><br>'+  cocktail.drinks[0].strInstructions
         filterSection.appendChild(instructions);
       
       }

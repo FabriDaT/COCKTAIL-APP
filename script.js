@@ -36,6 +36,9 @@ window.addEventListener("load", function(){
       for (let i = 1; i < 16; i++) {
         if(coktail.drinks[0][`strIngredient${i}`] !== null){
           let ingredient = document.createElement('li')
+          if (coktail.drinks[0][`strMeasure${i}`] === null){ 
+              ingredient.innerHTML = "hola" + coktail.drinks[0][`strIngredient${i}`]
+          }
           ingredient.innerHTML = coktail.drinks[0][`strMeasure${i}`] + ' ' + coktail.drinks[0][`strIngredient${i}`]
           drinkSection.appendChild(ingredient) 
         }
