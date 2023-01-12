@@ -3,51 +3,47 @@
 :root {
   --negro: #000000ff;
   --oscuro: #1c1c1f;
-
   --app-grey: #F2F2F2;
 
 }
 
 * {
-  margin: 13px;
+  margin: 0;
   padding: 0;
   font-family: 'Archivo', sans-serif;
   font-weight: 300;
   box-sizing: border-box;
 }
 
-h1
-{
-  font-family: 'Lobster', cursive;
-  font-family: 'Rubik Vinyl', cursive;
-  
-  text-align: center;
-  font-size: 3rem;
-
-}
-
 body {
+  margin: 4% auto;
+  max-width: 80%;
   min-height: 100vh;
   color: whitesmoke;
   background-color: var(--negro);
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
   align-items: center;
-  justify-content: center;
-   
+  justify-content: center; 
+}
+
+h1 {
+  font-family: 'Lobster', cursive;
+  font-family: 'Rubik Vinyl', cursive;
+  margin-bottom: 30px;
+  text-align: center;
+  font-size: 3rem;
 }
 
 button {
   border: none;
   border-radius: 3px;
   cursor: pointer;
-
 }
 
-/* CSS */
+
 .button-85 {
-  padding: 0.6em 2em;
+  padding: 1.6em 5em;
   border: none;
   outline: none;
   color: rgb(255, 255, 255);
@@ -121,10 +117,20 @@ button {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 10%;
 }
+#drink-section h2, .filter-section h2{
+  margin-bottom: 6%;
+  text-transform: uppercase;
+  text-decoration: underline;
+  text-decoration-style: double;
+}
+
 .filter-section img{
     width: 60%;
     height: auto;
+    margin-bottom: 7%;
+    cursor: pointer;
 }
 .filter-section{
   display: flex;
@@ -132,20 +138,36 @@ button {
   align-items: center;
 }
 
+.filter-section h2{
+  text-align: center;
+  margin: 7% 0px;
+}
+
+.go-to-filter{
+  margin: 5% 0;
+}
 div.card{
     border: 2px solid grey;
-    padding: 16px;
+    padding: 3%;
+    margin-top: 1%;
+    text-align: center;
+    line-height: 20px;
 }
 #filter-gallery{
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	grid-gap: 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 figure{
-	margin: 0;
+	margin: 6%  0;
 	padding: 0;
+  text-align: center;
 }
+ li{
+  margin: 3% 0%;
+ }
 
 .buttons{
     display: flex;
@@ -153,6 +175,7 @@ figure{
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+    margin-bottom: 5%;
 }
 .btn{
   z-index: 1;
@@ -189,9 +212,21 @@ figure{
 }
 
 
-@media screen and (max-width: 480px) {
-  body{
-    font-size: 0.5rem;
+@media only screen and (max-width: 480px) {
+  h1{
+    font-size: 1.9rem;
+  }
+  .btn{
+    width: 40%;
+    padding: 10px 0px;
+    font-size: 0.6rem;
+  }
+  .btn-find{
+    width: 40%;
+    height: 33%;
+    margin-bottom: 12%;
+    padding: 25px 0px;
+    font-size: 1.1rem;
   }
  img{
     width: 100%;
@@ -199,6 +234,14 @@ figure{
   .filter-section{
     display: flex;
     flex-direction: column;
+    margin: 0% 0%;
+  }
+  #drink-section h2{
+    margin-bottom: 5%;
+  }
+  .go-to-filter h2{
+    margin-top: 10%;
+    font-size: 0.8rem;
   }
 
 }
