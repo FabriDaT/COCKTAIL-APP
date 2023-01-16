@@ -16,7 +16,8 @@
 }
 
 body {
-  margin: 4% auto;
+  margin: 0 auto;
+  padding: 0 0 2% 0;
   max-width: 80%;
   min-height: 100vh;
   color: whitesmoke;
@@ -30,9 +31,9 @@ body {
 h1 {
   font-family: 'Lobster', cursive;
   font-family: 'Rubik Vinyl', cursive;
-  margin-bottom: 30px;
+  margin-bottom: 6%;
   text-align: center;
-  font-size: 3rem;
+  font-size: 3.2rem;
 }
 
 button {
@@ -116,36 +117,46 @@ button {
 #drink-section{
   display: flex;
   flex-direction: column;
-  align-items: center;
-  margin-top: 10%;
+  /*align-items: center;*/
+  margin-top: 6%;
 }
 #drink-section h2, .filter-section h2{
-  margin-bottom: 6%;
-  text-transform: uppercase;
-  text-decoration: underline;
-  text-decoration-style: double;
+  margin-bottom: 4%;
+  font-size: 1.8rem;
+  text-align: center;
 }
 
 .filter-section img{
     width: 60%;
     height: auto;
-    margin-bottom: 7%;
+    display: block;
+    margin:auto;
     cursor: pointer;
 }
 .filter-section{
   display: flex;
   flex-direction: column;
-  align-items: center;
+  /*align-items: center;*/
+  justify-content: center;
 }
 
-.filter-section h2{
-  text-align: center;
-  margin: 7% 0px;
-}
+
 
 .go-to-filter{
-  margin: 5% 0;
+  margin: 2% 0 0 0;
 }
+.go-to-filter p{
+  text-align: center;
+}
+.go-to-filter  a{
+  color : rgb(87, 130, 211);
+  text-decoration: none;
+}
+.go-to-filter  a:hover{
+  color: rgb(42, 204, 83);
+  text-decoration:line-through;
+}
+
 div.card{
     border: 2px solid grey;
     padding: 3%;
@@ -166,7 +177,7 @@ figure{
   text-align: center;
 }
  li{
-  margin: 3% 0%;
+  margin: 2% 0%;
  }
 
 .buttons{
@@ -175,7 +186,7 @@ figure{
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    margin-bottom: 5%;
+    margin-bottom: 4%;
 }
 .btn{
   z-index: 1;
@@ -214,7 +225,7 @@ figure{
 
 @media only screen and (max-width: 480px) {
   h1{
-    font-size: 1.9rem;
+    font-size: 2rem;
   }
   .btn{
     width: 40%;
@@ -224,7 +235,7 @@ figure{
   .btn-find{
     width: 40%;
     height: 33%;
-    margin-bottom: 12%;
+    margin-bottom: 1%;
     padding: 25px 0px;
     font-size: 1.1rem;
   }

@@ -27,8 +27,6 @@ btn6.addEventListener("click",()=>{
   filterCocktails(btn6.value)
 })
 
-
-
     //FILTER BY ALCOHOL
     
     function filterCocktails(alcohol){
@@ -66,6 +64,7 @@ btn6.addEventListener("click",()=>{
           img.src = drink.strDrinkThumb;
           img.setAttribute('data-id', drink.idDrink);
           let figcaption = document.createElement('figcaption');
+          figcaption.style.fontSize= '1.5rem';
           figcaption.innerText = drink.strDrink;
       
           figure.appendChild(img);
@@ -88,7 +87,7 @@ btn6.addEventListener("click",()=>{
         .then(
           function(response) {
             if (response.status !== 200) {
-              console.log('Looks like there was a problem. Status Code: ' +
+              console.log('Looks like there was a problem. Status Code:  ' +
                 response.status);
               return;
             }
@@ -125,6 +124,7 @@ btn6.addEventListener("click",()=>{
         //display ingredients
         let ingredientHeading = document.createElement('h3');
         ingredientHeading.innerText = 'Ingredients';
+        let list = document.createElement('ul')
         for(let i=1; i<16; i++){
           if(cocktail.drinks[0][`strIngredient${i}`] == null){
             break;
@@ -135,9 +135,12 @@ btn6.addEventListener("click",()=>{
             measure = cocktail.drinks[0][`strMeasure${i}`] + ': ';
           }
       
+          
           let ingredient = document.createElement('li');
+          list.appendChild(ingredient)
           ingredient.innerText = measure + cocktail.drinks[0][`strIngredient${i}`];
-          filterSection.appendChild(ingredient);
+ 
+          filterSection.appendChild(list);
         }
       
         let instructions = document.createElement('div');

@@ -5,7 +5,7 @@ window.addEventListener("load", function(){
   button.addEventListener("click", (event)=>{
     
      function realizarConsulta(){
-
+      
       fetch('http://www.thecocktaildb.com/api/json/v1/1/random.php')
         .then((response) => {
           if(response.status !== 200){
@@ -41,7 +41,7 @@ window.addEventListener("load", function(){
           }
           ingredient.innerHTML = coktail.drinks[0][`strMeasure${i}`] + ' ' + coktail.drinks[0][`strIngredient${i}`]
           drinkSection.appendChild(ingredient) 
-        }
+        }   
       }  
       let card = document.createElement('div')
       card.classList.add('card')
