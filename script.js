@@ -37,7 +37,7 @@ window.addEventListener("load", function(){
         if(coktail.drinks[0][`strIngredient${i}`] !== null){
           let ingredient = document.createElement('li')
           if (coktail.drinks[0][`strMeasure${i}`] === null){ 
-              ingredient.innerHTML = '' + coktail.drinks[0][`strIngredient${i}`]
+              ingredient.innerHTML = ' ' + coktail.drinks[0][`strIngredient${i}`]
           }
           ingredient.innerHTML = coktail.drinks[0][`strMeasure${i}`] + ' ' + coktail.drinks[0][`strIngredient${i}`]
           drinkSection.appendChild(ingredient) 
@@ -48,8 +48,6 @@ window.addEventListener("load", function(){
       card.innerHTML ='Instructions  <br><br>'+  coktail.drinks[0].strInstructions
       drinkSection.appendChild(card)
     }
-
-
 
 });
 

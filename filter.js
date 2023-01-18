@@ -64,7 +64,8 @@ btn6.addEventListener("click",()=>{
           img.src = drink.strDrinkThumb;
           img.setAttribute('data-id', drink.idDrink);
           let figcaption = document.createElement('figcaption');
-          figcaption.style.fontSize= '1.5rem';
+          figcaption.style.fontSize= '1rem';
+          figcaption.style.margin= 'inherit';
           figcaption.innerText = drink.strDrink;
       
           figure.appendChild(img);
