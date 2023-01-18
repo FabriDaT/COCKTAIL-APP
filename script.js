@@ -34,15 +34,21 @@ window.addEventListener("load", function(){
       drinkSection.appendChild(img)
 
       for (let i = 1; i < 16; i++) {
-        if(coktail.drinks[0][`strIngredient${i}`] !== null){
+        if(coktail.drinks[0][`strIngredient${i}`] == null){
+          break;
+          }  
+          let measure = '';
           let ingredient = document.createElement('li')
-          if (coktail.drinks[0][`strMeasure${i}`] === null){ 
-              ingredient.innerHTML = ' ' + coktail.drinks[0][`strIngredient${i}`]
+          if (coktail.drinks[0][`strMeasure${i}`] != null){ 
+            measure = coktail.drinks[0][`strMeasure${i}`] + ': ';
+
+             // ingredient.innerHTML = ' ' + coktail.drinks[0][`strIngredient${i}`]
           }
-          ingredient.innerHTML = coktail.drinks[0][`strMeasure${i}`] + ' ' + coktail.drinks[0][`strIngredient${i}`]
+          ingredient.innerText = measure + coktail.drinks[0][`strIngredient${i}`];
           drinkSection.appendChild(ingredient) 
-        }   
-      }  
+         
+      }
+
       let card = document.createElement('div')
       card.classList.add('card')
       card.innerHTML ='Instructions  <br><br>'+  coktail.drinks[0].strInstructions
