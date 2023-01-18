@@ -6,7 +6,7 @@ window.addEventListener("load", function(){
     
      function realizarConsulta(){
       
-      fetch('http://www.thecocktaildb.com/api/json/v1/1/random.php')
+      fetch('https://www.thecocktaildb.com/api/json/v1/1/random.php')
         .then((response) => {
           if(response.status !== 200){
             console.log("Something wents wrong, try again." + response.status)
