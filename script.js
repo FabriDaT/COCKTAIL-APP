@@ -30,6 +30,7 @@ window.addEventListener("load", function(){
       drinkName.innerHTML= coktail.drinks[0].strDrink
       drinkSection.appendChild(drinkName)
       let img = document.createElement('img')
+      img.style.borderRadius = '10px'
       img.src = coktail.drinks[0].strDrinkThumb
       drinkSection.appendChild(img)
 

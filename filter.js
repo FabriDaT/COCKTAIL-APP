@@ -61,6 +61,7 @@ btn6.addEventListener("click",()=>{
           let figure = document.createElement('figure');
           
           let img = document.createElement('img');
+          img.style.borderRadius='10px';
           img.src = drink.strDrinkThumb;
           img.setAttribute('data-id', drink.idDrink);
           let figcaption = document.createElement('figcaption');
